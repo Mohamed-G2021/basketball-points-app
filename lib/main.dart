@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => CounterCubit(CounterAIncrementState),
-      child: MaterialApp(
+      child: const MaterialApp(
         title: 'Basketball points app',
         home: HomePage(),
         debugShowCheckedModeBanner: false,
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
-  HomePage({Key? key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
