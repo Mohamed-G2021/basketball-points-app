@@ -191,7 +191,16 @@ class HomePage extends StatelessWidget {
                       height: 70,
                     ),
                     ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          BlocProvider.of<CounterCubit>(context)
+                              .resetPointsCounter(
+                                  teamAPoints:
+                                      BlocProvider.of<CounterCubit>(context)
+                                          .numOfPointsTeamA,
+                                  teamBPoints:
+                                      BlocProvider.of<CounterCubit>(context)
+                                          .numOfPointsTeamB);
+                        },
                         style: ElevatedButton.styleFrom(primary: Colors.orange),
                         child: const Text(
                           'Reset',
